@@ -8,7 +8,9 @@ function ubahHuruf(kata) {
 
     for (let i = 0; i < kataLength; i++) {
         let ascii = kata.charCodeAt(i);
-        ascii++;
+        if (ascii !== 122) {
+            ascii++;
+        }
         newKata += String.fromCharCode(ascii);
     }
     return newKata;
